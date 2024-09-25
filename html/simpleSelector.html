@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> 단순선택자의 예</title>
+    <style>
+        * {
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(4, 4, 104);
+        }
+
+        /* 특이값: 11
+        */
+        p.test {
+            background-color: rgb(71, 211, 130);
+        }
+
+        /* 특이값 : 10*/
+        .one {
+            background-color: cornflowerblue;
+        }
+
+        /* 특이값 : 101 */
+        p#two {
+            font-size: 1.5em;
+        }
+
+        #two,
+        .three {
+            color: white;
+            background-color: black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>단순선택자의 예</h2>
+    <p class="one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Asperiores beatae natus saepe esse nobis vitae quas optio odio perspiciatis nam a quos iste, atque molestiae sit
+        in eaque similique odit?
+    </p>
+    <p class="three">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam quisquam iste veniam pariatur laboriosam illo
+        labore perferendis accusantium dolorem iusto quas, sunt delectus dolorum at facilis harum facere repellat
+        accusamus!
+    </p>
+    <p class="one test">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi voluptate dolor quibusdam illo mollitia animi
+        ipsum, dolores similique quam suscipit quidem alias, explicabo perspiciatis! Nisi iste nam ut consequuntur fuga.
+    </p>
+    <p id="two">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates odio doloribus accusamus asperiores
+        consequuntur possimus eligendi. Assumenda, iusto soluta maiores sunt nemo cum labore. Ipsum sequi itaque
+        voluptatem! Temporibus, excepturi.
+    </p>
+</body>
+
+</html>

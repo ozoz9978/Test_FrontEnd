@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>survey</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script defer src="survey.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h2>2018년 국내 공개 SW 수요조사</h2>
+        <img src="../images/computer.png">
+    </div>
+    <div action="">
+        <table>
+            <tbody>
+                <tr>
+                    <th><span class="important">*</span> 이름</th>
+                    <td><input type="text" id="username"></td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span> 연락처(전화번호)</th>
+                    <td>
+                        <select name="" id="phone1">
+                            <option value="010">010</option>
+                            <option value="011">011</option>
+                            <option value="019">019</option>
+                            <option value="018">018</option>
+                            <option value="107">018</option>
+                        </select> -
+                        <input type="text" id="phone2">
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span> Email</th>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span> IT 직업군</th>
+                    <td>
+                        <select name="" id="ITjob">
+                            <option value="AD">Application Developer</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="middle">
+            <p><span class="important">*</span> Google 서비스 중 가장 많이 사용하는 것은 무엇입니까?</p>
+            <label> <input type="checkbox" name="path1" class="path1" value="GMail" checked>GMail</label>
+            <label> <input type="checkbox" name="path1" class="path1" value="Calendar">Calendar</label>
+            <label> <input type="checkbox" name="path1" class="path1" value="주소록">주소록</label>
+            <label> <input type="checkbox" name="path1" class="path1" value="Drive">Drive</label>
+            <label> <input type="checkbox" name="path1" class="path1" value="You Tube">You Tube</label>
+
+            <p><span class="important">*</span> Google 문서도구 중 그 기능을 좀 더 강화했으면 하는 도구는 무엇입니까?</p>
+            <label> <input type="checkbox" name="path2" class="path2" value="구글 워드프레스" checked>구글 워드프레스</label>
+            <label><input type="checkbox" name="path2" class="path2" value="구글 스프레드시트">구글 스프레드시트</label>
+            <label><input type="checkbox" name="path2" class="path2" value="구글 지도">구글 지도</label>
+            <label> <input type="checkbox" name="path2" class="path2" value="설문조사">설문조사</label>
+
+            <p><span class="important">*</span> 기타 남기실 말씀은?</p>
+            <label><input type="text" id="기타"></label>
+        </div>
+        <div class="buttons">
+            <input type="button" id="submit" value="제출"> &nbsp;
+            <input type="reset" value="취소">
+        </div>
+        <div id="final"></div>
+    </div>
+</body>
+
+</html>

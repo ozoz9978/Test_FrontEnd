@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position을 이용한 배치2</title>
+    <style>
+        div.parent {
+            border: 1px dashed #aaa;
+            padding: 10px;
+            position: relative;
+            top: 100px;
+
+
+        }
+
+
+        div.sibling {
+            background-color: skyblue;
+            padding: 5px;
+            text-align: center;
+        }
+
+        div.second {
+            width: 100px;
+            height: 100px;
+            background-color: tan;
+        }
+
+        /* position값이 static 일 경우 top, bottom, left, right가 적용 안된다 */
+        div.static {
+            position: static;
+            top: 20px;
+            left: 20px;
+
+        }
+
+        /* position 이 relative 경우 top, bottom, left, right가 적용된다
+        아래 태그들은 영향받지 않는다 */
+        div.relative {
+            position: relative;
+            top: 20px;
+            left: 20px;
+
+        }
+
+        /* position 이 fixed 경우 top, bottom, left, right가 적용된다
+        아래 태그들은 영향받지 않는다 화면을 기준 삼는다*/
+        div.fixed {
+            position: fixed;
+            bottom: 50px;
+            right: 20px;
+
+        }
+
+        /* positiion이 absolutle 경우 top, bottom, left, right가 젹용된다
+        아래태그들은 영향을 받는다
+        부모요소 중 relative, absolute 영향받는다
+        부모요소중  relative,absolute 속성을 가진 요소가 없으면 body 태그가  */
+        div.absolute {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2 id="top">Position을 이용한 배치2</h2>
+    <h3>static(default)</h3>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second static">Static</div>
+        <div class="sibling">Third</div>
+
+    </div>
+    <h3>relative</h3>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second relative">Relative</div>
+        <div class="sibling">Third</div>
+
+    </div>
+    <h3>absolute</h3>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second absolute">absolute</div>
+        <div class="sibling">Third</div>
+
+    </div>
+    <h3>fixed</h3>
+    <div class="parent">
+        <div class="sibling">First</div>
+        <div class="second fixed">fixed</div>
+        <a href="#top">
+        </a>
+        <div class="sibling">Third</div>
+
+    </div>
+
+
+
+</body>
+
+</html>

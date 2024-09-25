@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS로 CSS 접근하기</title>
+    <script defer src="./A23.css.js"></script>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: cornsilk;
+            visibility: hidden;
+
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            transition: all 1s ease-in-out;
+
+        }
+
+        .item:hover {
+            width: 200px;
+            height: 200px;
+        }
+
+        p#click {
+            width: 200px;
+            padding: 30px;
+            background-color: blueviolet;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* 평상시에 그림 모습 */
+        div.myImg>img {
+            opacity: 0.0;
+            width: 100px;
+            transition: all 1s ease-in-out;
+        }
+
+        /* ~ : 같은 형제 */
+        #click:hover~div>img {
+            opacity: 1.0;
+            /* 투명도 */
+            width: 500px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <H2>JS로 CSS 접근하기</H2>
+    <DIV>
+        <input type="button" value="바꾸기" id="change">
+        <input type="button" value="나타나기" id="view">
+        <input type="button" value="색깔 바꾸기" id="changecolor">
+
+    </DIV>
+    <p id="song">
+        나리나리 개나리 입에 따다 물고요<br>
+        병아리때 뿅뿅뿅. 봄나들이 갑니다.
+    </p>
+    <div class="box"></div>
+    <div class="item">Css transition</div>
+    <p id="click">마우스를 올려보세요</p>
+    <div class="myImg">
+        <img src="./face3.png" alt="">
+    </div>
+</body>
+
+</html>

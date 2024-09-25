@@ -1,0 +1,89 @@
+<!-- 3) 간단한 계산기 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 계산기</title>
+
+</head>
+
+<body>
+    <fieldset>
+        <legend>
+            <h2>간단한 계산기</h2>
+        </legend>
+        <div>
+            <input type="text" id="x">
+            <select id="operator">
+                <option value="+"> 더하기 </option>
+                <option value="-"> 빼기 </option>
+                <option value="*"> 곱하기 </option>
+                <option value="/"> 나누기 </option>
+                <option value="**"> 거듭제곱 </option>
+            </select>
+            <input type="text" id="y">
+            <input type="button" value="=" id="calculator">
+            <input type="button" value="C" id="clear">
+            <input type="text" id="result" readonly>
+        </div>
+    </fieldset>
+    <script>
+        // Code Here
+        let x = document.getElementById('x');
+        let y = document.getElementById('y');
+        let result = document.getElementById('result');
+
+        var operator = document.getElementById('operator');
+
+        let calculatorButton = document.getElementById('calculator');
+        let clearButton = document.getElementById('clear');
+
+        calculatorButton.addEventListener('click', cal);
+        clearButton.addEventListener('click', clearAll);
+
+        function cal() {
+            let val1 = x.value;
+            let val2 = y.value;
+
+            val1 = parseInt(val1);
+            val2 = parseInt(val2);
+
+            let op = operator.value;
+
+
+            if (op == "+") {
+                result.value = (val1 + val2);
+
+            }
+
+            else if (op == "-") {
+                result.value = (val1 - val2);
+            }
+
+            else if (op == "*") {
+                result.value = (val1 * val2);
+            }
+
+            else if (op == "/") {
+                result.value = (val1 / val2);
+            }
+            else {
+                result.value = (Math.pow(val1, val2));
+            }
+
+        }
+
+
+        function clearAll() {
+            x.value = "";
+            y.value = "";
+            result.value = "";
+        }
+
+    </script>
+</body>
+
+</html>

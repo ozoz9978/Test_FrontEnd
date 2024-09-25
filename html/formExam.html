@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="stylesheet" href="../css/formExam.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>회원가입_회원정보 입력</h1>
+        <div>🏠홈 &gt; 회원 &gt; 회원가입<br></div>
+        <div>⏹️<strong>회원정보입력</strong></div>
+        <caption><span class="important">*</span> 표시된 항목은 <span class="important">필수입력</span> 항목입니다.</caption>
+    </div>
+    <form action="" method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <th>이름</th>
+                    <td>조인영</td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>아이디</th>
+                    <td>
+                        <label for="userid">
+                            <input type="search" id="userid" name="userid" maxlength="15">
+                            <button>중복확인</button><br>
+                            영문소문자, 숫자 5 ~ 12자
+                        </label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>비밀번호</th>
+                    <td>
+                        <label for="userpwd">
+                            <input type="password" id="userpwd" name="userpwd" maxlength="15"><br>
+                            영문, 숫자, 특수문자 중 2가지 이상 혼합하여 10~15자로 입력하세요.<br>
+                            ※ 특수문자는 "~!@#*()_|.만 사용가능합니다.
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>비밀번호확인</th>
+                    <td>
+                        <label for="pwdCheck">
+                            <input type="password" id="pwdCheck" name="pwdCheck"><br>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>연락처</th>
+                    <td>
+                        <label for="phone">휴대전화 : </label>
+                        <select name="phone" id="phone">
+                            <optgroup>
+                                <option value="010">010</option>
+                                <option value="011">011</option>
+                                <option value="016">016</option>
+                                <option value="017">017</option>
+                                <option value="018">018</option>
+                            </optgroup>
+                        </select>
+                        <label for="phoneNum1">-</label>
+                        <input type="text" id="phoneNum1" name="phoneNum1">
+                        <label for="phoneNum2">-</label>
+                        <input type="text" id="phoneNum2" name="phoneNum2">
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>이메일</th>
+                    <td>
+                        <label for="email">
+                            <input type="text" id="email" name="email">
+                        </label>
+                        <label for="domain">@
+                            <select name="domain" id="domain">
+                                <optgroup>
+                                    <option value="직접입력">직접입력</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="nate.com">nate.com</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="hanmail.com">hanmail.com</option>
+                                </optgroup>
+                            </select>
+                            <input type="text" name="domain" id="domain">
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>주소</th>
+                    <td>
+                        <label for="address">
+                            <select name="address" id="address">
+                                <optgroup>
+                                    <option value="선택">선택</option>
+                                    <option value="서울시">서울시</option>
+                                    <option value="부산시">부산시</option>
+                                    <option value="인천시">인천시</option>
+                                    <option value="광주시">광주시</option>
+                                </optgroup>
+                            </select>
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="important">*</span>정보수신동의</th>
+                    <td>
+                        <label><strong>이메일 수신</strong></label>
+                        <input type="radio" name="agreement" value="예"> 예
+                        <input type="radio" name="agreement" value="아니오" checked> 아니오
+                        <hr>
+                        <label for="">카카오톡 수신</label>
+                        <input type="checkbox" name="kakaotalk">카카오톡 맞춤정보 사용 동의
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="buttons">
+            <input type="submit" value="가입하기"> &nbsp; <!-- 폼 전체의 내용을 서버로 전송 -->
+            <input type="reset" value="취소"> <!-- 폼 태그로 감싼 내용을 초기화 -->
+        </div>
+    </form>
+</body>
+
+</html>
